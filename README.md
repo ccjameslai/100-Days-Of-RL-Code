@@ -12,10 +12,12 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   What is MDP
   MDP is a transition matrix with actions and rewards.
   MDP is used to simulate a world in the form of a grid by dividing it into states, actions, rewards, and transition models.
- 
-
-  Circle is state.
-  {Facebook, Quit, Study, Pub, Sleep} are actions.
+  
+  <p align="center">
+  <img src="https://github.com">
+  </p>
+  Circle is state.<br>
+  {Facebook, Quit, Study, Pub, Sleep} are actions.<br>
   R is reward.
 
   MDP and RL
