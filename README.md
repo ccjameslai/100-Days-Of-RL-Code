@@ -20,4 +20,4 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   R is reward.
 
   ### MDP and RL
-  a reinforcement learning task composed of states, actions, rewards that follows Markov property would be considered a MDP.
+  A reinforcement learning task composed of states, actions, rewards that follows Markov property would be considered a MDP.
