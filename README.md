@@ -18,6 +18,15 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   Circle is state.<br>
   {Facebook, Quit, Study, Pub, Sleep} are actions.<br>
   R is reward.
-
+  
+  MDP is defined as the following:
+  
+  - **States**: S
+  - **Actions**:A(s), A
+  - **Transition model**: T(s,a,s') ~ P(s'|s,a)
+  - **Rewards**: R(s), R(s,a), R(s,a,s')
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+  - **Policy**: $$a_{\pi^\*}$$
+  
   ### MDP and RL
   A reinforcement learning task composed of states, actions, rewards that follows Markov property would be considered a MDP.
