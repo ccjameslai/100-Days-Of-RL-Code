@@ -27,5 +27,10 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   - **Rewards**: R(s), R(s,a), R(s,a,s')
   - **Policy**: π
   
-  ### MDP and RL
-  A reinforcement learning task composed of states, actions, rewards that follows Markov property would be considered a MDP.
+- ## MDP and RL | Day 2
+  
+  A reinforcement learning (RL) task composed of states, actions, rewards that follows Markov property would be considered a MDP.
+  
+  The goal of RL is to find an optimal policy with a given MDP. Policy is a mapping function, which is from state to action and is a probability that an action is selected in a state. 
+  
+  
