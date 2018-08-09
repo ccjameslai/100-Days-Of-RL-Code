@@ -36,3 +36,5 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   The goal of RL is to find an optimal policy with a given MDP. Policy is a mapping function, which is from state to action and is a probability that an action is selected in a state. 
   
 ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/policy_and_value_function.PNG)
+
+![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/value_function.PNG)
