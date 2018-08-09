@@ -25,7 +25,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   - **Actions**:A(s), A
   - **Transition model**: T(s,a,s') ~ P(s'|s,a)
   - **Rewards**: R(s), R(s,a), R(s,a,s')
-  - **Policy**: 
+  - **Policy**: π
   
   ### MDP and RL
   A reinforcement learning task composed of states, actions, rewards that follows Markov property would be considered a MDP.
