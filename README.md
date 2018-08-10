@@ -46,3 +46,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   **Bellman Equation** (used in programming)
 
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/Bellman_Equation.PNG)
+  
+  - ## Implementing MDP | Day 3
+  
+  check out the code [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/Day3_MDP.py)
