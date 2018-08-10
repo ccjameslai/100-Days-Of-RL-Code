@@ -53,8 +53,6 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/grid_map.PNG)
   
-  p(desired action) = 0.8, p(other actions prependicular desired action) = 0.1
-  
-  
+  p(desired action) = 0.8, p(other actions prependicular desired action) = 0.1, reward = -3
   
   check out the code [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/Day3_MDP.py)
