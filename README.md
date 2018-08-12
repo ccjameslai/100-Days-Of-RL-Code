@@ -63,4 +63,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
   RL can be modelled as a MDP, which fits two conditions of DP. These two conditions are 1) main problem can decompose to subproblems, 2) the solutions of subproblems can be stored and reused.
   
-  There are two ways to get the optimal policy, policy iteration and value iteration. The difference between these two methods is the timing of updating state value. Improving policy after evaluating it once is called value iteration.
+  There are two ways to get the optimal policy, policy iteration and value iteration. Policy iteration consist of policy evaluation ans policy improvment.
+  
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/policy_iteration.PNG)
+  
+  The difference between policy iteration and value iteration is the timing of updating state value. Improving policy after evaluating it once is called value iteration.
