@@ -57,4 +57,10 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
   check out the code [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/Day3_MDP.py)
   
- - ## Dynamic Programming for solving MDP | Day 4
+- ## Dynamic Programming for solving MDP | Day 4
+ 
+  The key idea of DP is the use of value function to find the optimal policy.
+  
+  RL can be modelled as a MDP, which fits two conditions of DP. These two conditions are 1) main problem can decompose to subproblems, 2) the solutions of subproblems can be stored and reused.
+  
+  
