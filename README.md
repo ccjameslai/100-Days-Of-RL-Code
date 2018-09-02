@@ -68,3 +68,17 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/policy_iteration.PNG)
   
   The difference between policy iteration and value iteration is the timing of updating state value. Improving policy after evaluating it once is called value iteration.
+
+- ## Policy iteration and Value iteration | Day 5
+
+  Policy iteration : 
+      1) Value function have to be converged and then use this value function to decide the optimal policy.
+      2) Repeat the process until policy is stable.
+  
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Policy_iteration.PNG)
+  
+  Value iteration:
+      1) Calculate the optimal policy and assign this value to value function.
+      2) Repeat the process until value function is stable.
+      
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Value_iteration.PNG)
