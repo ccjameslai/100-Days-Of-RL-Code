@@ -92,3 +92,17 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
       2) Repeat the process until value function is stable.
       
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Value_iteration.png)
+  
+- ## Monte Carlo Methods | Day 6
+
+  It is a model free based method, which transition model(P) is unknow.
+  
+  But, the critical concept is the same as model based method, policy evaluation and policy improvement.
+  
+  Because transition model is unknow, it generates many episodes instead of transition model to calculate the total reward(G). 
+  
+  And it averages these total rewards as value function.
+  
+  There are two ways to implement Monte Carlo method according as whether the policy exploration and policy evaluation is the same or not. 
+  
+  
