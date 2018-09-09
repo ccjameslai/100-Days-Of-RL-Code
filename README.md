@@ -93,9 +93,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
       
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Value_iteration.png)
   
-- ## Monte Carlo Methods | Day 6
+- ## Value function for Monte Carlo Method | Day 6
 
-  It is a model free based method, which transition model(P) is unknow.
+  Monte Carlo for RL is a model free based method, which transition model(P) is unknow.
   
   But, the critical concept is the same as model based method, policy evaluation and policy improvement.
   
@@ -103,12 +103,18 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
   And it averages these total rewards as value function.
   
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_PolicyEvaluation.JPG)
+  
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_ES.JPG)
+  
+- ## Two methods for Monte Carlo Method | Day 7
+
   There are two ways to implement Monte Carlo method, on-policy and off-policy. 
   
     - On-policy is that they estimate the value of policy while using it for control
     
     - In off-policy, these two functions(control policy and evaluation policy) are separated
     
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_PolicyEvaluation.JPG)
+   
   
   
