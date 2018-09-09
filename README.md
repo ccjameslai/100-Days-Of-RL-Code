@@ -115,6 +115,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
     
     - In off-policy, these two functions(control policy and evaluation policy) are separated
     
-   
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_offpolicy.JPG)
+  
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_onpolicy.JPG)
   
   
