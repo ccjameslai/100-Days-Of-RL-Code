@@ -61,10 +61,48 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  
   The key idea of DP is the use of value function to find the optimal policy.
   
-  RL can be modelled as a MDP, which fits two conditions of DP. These two conditions are 1) main problem can decompose to subproblems, 2) the solutions of subproblems can be stored and reused.
+  RL can be modelled as a MDP, which fits two conditions of DP. 
+  
+  These two conditions are 
+  
+      1) main problem can decompose to subproblems
+      
+      2) the solutions of subproblems can be stored and reused.
   
   There are two ways to get the optimal policy, policy iteration and value iteration. Policy iteration consist of policy evaluation ans policy improvment.
   
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/policy_iteration.PNG)
   
   The difference between policy iteration and value iteration is the timing of updating state value. Improving policy after evaluating it once is called value iteration.
+
+- ## Policy iteration and Value iteration | Day 5
+
+  Policy iteration : 
+  
+      1) Value function have to be converged and then use this value function to decide the optimal policy.
+      
+      2) Repeat the process until policy is stable.
+  
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Policy_iteration.png)
+  
+  Value iteration:
+  
+      1) Calculate the optimal policy and assign this value to value function.
+      
+      2) Repeat the process until value function is stable.
+      
+  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_Value_iteration.png)
+  
+- ## Monte Carlo Methods | Day 6
+
+  It is a model free based method, which transition model(P) is unknow.
+  
+  But, the critical concept is the same as model based method, policy evaluation and policy improvement.
+  
+  Because transition model is unknow, it generates many episodes instead of transition model to calculate the total reward(G). 
+  
+  And it averages these total rewards as value function.
+  
+  There are two ways to implement Monte Carlo method according as whether the policy exploration and policy evaluation is the same or not. 
+  
+  
