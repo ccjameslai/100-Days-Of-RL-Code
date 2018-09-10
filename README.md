@@ -119,6 +119,22 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
     
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_offpolicy.JPG)
   
+ - ## Temporal-Diffrerence Learning | Day 8
+   
+   TD is another model-free method of RL.
+   
+   TD has adventages of dynamic programming and Monte Carlo.
+     
+     - like MC method, TD can learn derictly from raw experience without a model of the environment's dynamics.
+     
+     - like DP method, TD updates estimates based in part on other learned estimates, without waiting for a final outcome.
+     
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/dp.JPG)
+     
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/mcmethod.JPG)
+     
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdlearning.JPG)
+  
   
   
   
