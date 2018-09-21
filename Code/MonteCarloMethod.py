@@ -81,4 +81,5 @@ class MonteCarlo(object):
 
         print('mc')
         print(vfunc)
-        print(nfunc)
+
+        return vfunc
