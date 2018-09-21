@@ -1,9 +1,8 @@
 import random as rnd
 import MonteCarloMethod
 
-mc = MonteCarloMethod.MoteCarlo()
+mc = MonteCarloMethod.MonteCarlo()
 
-s, a, r = mc.gen_randompi_sample(3)
+s, a, r = mc.gen_randompi_sample(50)
 
-print(s)
-
+mc.mc(0.5, s, a, r)
