@@ -54,4 +54,31 @@ class MonteCarlo(object):
 
         return state_sample, action_sample, reward_sample
 
+    def mc(self, gamma, state_sample, action_sample, reward_sample):
+        vfunc = dict()
+        nfunc = dict()
+        for s in self.states:
+            vfunc[s] = 0.0
+            nfunc[s] = 0.0
 
+        for iterl in range(len(state_sample)):
+            G = 0.0
+
+            for step in range(len(state_sample[iterl])-1, -1, -1):
+                G *= gamma
+                G += reward_sample[iterl][step]
+
+            for step in range(len(state_sample[iterl])):
+                s = state_sample[iterl][step]
+                vfunc[s] += G
+                nfunc[s] += 1.0
+                G -= reward_sample[iterl][step]
+                G /= gamma
+
+        for s in self.states:
+            if nfunc[s] > 0.000001:
+                vfunc[s] /= nfunc[s]
+
+        print('mc')
+        print(vfunc)
+        print(nfunc)
