@@ -107,7 +107,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_ES.JPG)
   
-  **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/MonteCarloMethod.py)
+  **check out the code(generate random samples and mc policy evaluation)** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/MonteCarloMethod.py)
   
 - ## Two methods for Monte Carlo Method | Day 7
 
