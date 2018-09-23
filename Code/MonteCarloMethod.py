@@ -13,7 +13,7 @@ def transform(state, action):
                  [1,1,2,4,4,6,6,8],
                  [1,2,3,1,2,4,5,8]]
 
-    dict_action = {'e':0,'s':1, 'w':2, 'n':3}
+    dict_action = {'e':0, 's':1, 'w':2, 'n':3}
 
     new_state = s_a_table[dict_action[action]][state-1]
 
@@ -23,11 +23,37 @@ def transform(state, action):
 
     return terminal, new_state, -1
 
+def epsilon_greedy(qfunc, s, epsilon):
+    action = ['e', 's', 'w', 'n']
+    pi = 1 - epsilon + float(epsilon / len(action))
+    temp = 0.0
+    max_a = ''
+    for a in action:
+        if temp < qfunc[str(s) + "_" + a]:
+            temp = qfunc[str(s) + "_" + a]
+            max_a = a
+        else:
+            max_a = action[rnd.randint(0, 3)]
+
+    other_action = action[:]
+    other_action.remove(max_a)
+    prob = rnd.random()
+
+    if prob <= pi:
+        return max_a
+    else:
+        idx = rnd.randint(0, 2)
+        return other_action[idx]
+
 class MonteCarlo(object):
     def __init__(self):
         self.states = [i+1 for i in range(8)]
         self.action = ['e', 's', 'w', 'n']
         self.terminal = 8
+        self.s_a_table = [[2, 3, 3, 5, 5, 7, 8, 8],
+                          [4, 5, 3, 6, 7, 6, 7, 8],
+                          [1, 1, 2, 4, 4, 6, 6, 8],
+                          [1, 2, 3, 1, 2, 4, 5, 8]]
 
     def gen_randompi_sample(self, num):
         state_sample = []
@@ -54,7 +80,7 @@ class MonteCarlo(object):
 
         return state_sample, action_sample, reward_sample
 
-    def mc(self, gamma, state_sample, action_sample, reward_sample):
+    def mc_policy_evaluation(self, gamma, state_sample, action_sample, reward_sample):
         vfunc = dict()
         nfunc = dict()
         for s in self.states:
@@ -79,7 +105,67 @@ class MonteCarlo(object):
             if nfunc[s] > 0.000001:
                 vfunc[s] /= nfunc[s]
 
-        print('mc')
-        print(vfunc)
-
         return vfunc
+
+    def mc_for_Q(self, num_iterl, epsilon):
+        n = dict()
+        qfunc = dict()
+        gamma = 1
+
+        for s in self.states:
+            for a in self.action:
+                qfunc["%d_%s"%(s, a)] = 0.0
+                n["%d_%s"%(s, a)] = 0.00001
+
+        for iterl in range(num_iterl):
+            s_sample = []
+            a_sample = []
+            r_sample = []
+            s = self.states[int(rnd.random() * len(self.states))]
+            t = False
+            count = 0
+
+            while t == False and count <= 100:
+                a = epsilon_greedy(qfunc, s, epsilon)
+                t, new_s, r = transform(s, a)
+                s_sample.append(s)
+                a_sample.append(a)
+                r_sample.append(r)
+                s = new_s
+                count+=1
+
+            g = 0.0
+            for i in range(len(s_sample)-1, -1, -1):
+                g *= gamma
+                g += r_sample[i]
+
+            for i in range(len(s_sample)):
+                key = "%d_%s"%(s_sample[i], a_sample[i])
+                n[key] += 1.0
+                qfunc[key] = round((qfunc[key] * (n[key]-1) + g) / n[key], 2)
+                g -= r_sample[i]
+                g /= gamma
+
+        return qfunc
+
+    def mc(self, start_position, qfunc):
+        state_flow = ''
+        while True:
+            k_list = []
+            v_list = []
+            for k, v in qfunc.items():
+                if str(start_position) == k.split('_')[0]:
+                    k_list.append(k)
+                    v_list.append(v)
+
+            idx = v_list.index(max(v_list))
+            a = k_list[idx].split('_')[1]
+            a_idx = self.action.index(a)
+            new_s = str(self.s_a_table[a_idx][int(start_position) - 1])
+            state_flow += new_s + ', '
+            start_position = new_s
+            if start_position == '8':
+                state_flow.strip(', ')
+                break
+
+        return state_flow
