@@ -121,11 +121,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
  - ## Sample code for Monte Carlo | Day 8 
   
-  Example:
+   Example:
   
-  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/maze.JPG)
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/maze.JPG)
   
-  **check out the code(generate random samples and mc policy evaluation)** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/MonteCarloMethod.py)
+   **check out the code(generate random samples and mc policy evaluation)** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/MonteCarloMethod.py)
   
  - ## Temporal-Diffrerence Learning | Day 9
    
