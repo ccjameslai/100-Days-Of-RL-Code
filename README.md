@@ -135,7 +135,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    TD is another model-free method of RL.
    
-   TD has adventages of dynamic programming and Monte Carlo.
+   TD has adventages of both dynamic programming and Monte Carlo.
      
      - like MC method, TD can learn derictly from raw experience without a model of the environment's dynamics.
      
