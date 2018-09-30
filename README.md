@@ -166,3 +166,10 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\ is\ TD\ bias\ 
    $$
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/difference_among_three_methods.JPG)
+
+   - Value function of MC is an unbiased estimation, but variance is large.
+   
+   - Value function of TD is an biased estimation, but variance is small.
+   
