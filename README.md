@@ -159,11 +159,13 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    $$
    V(S_t) \leftarrow V(S_t) + \alpha ({\color{Blue} R_{t+1} + \gamma V(S_{t+1})} - V(S_t))
-   
-   {\color{Blue} R_{t+1} + \gamma V(S_{t+1})} is TD target
-   
-   {\color{Red} \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)} is TD bias
    $$
    
+   $$
+   {\color{Blue} R_{t+1} + \gamma V(S_{t+1})} is TD target
+   $$
    
+   $$
+   {\color{Red} \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)} is TD bias
+   $$
   
