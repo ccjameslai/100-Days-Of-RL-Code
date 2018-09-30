@@ -121,20 +121,31 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
  - ## Sample code for Monte Carlo | Day 8 
   
-  Example:
-  ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/MC_offpolicy.JPG)
+   Example:
   
-  **check out the code(generate random samples and mc policy evaluation)** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/MonteCarloMethod.py)
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/maze.JPG)
+  
+   - Executing Test_mc() in TestMonteCarlo.py can find the best way to terminal state, which is 8.
+   
+   - There are implements, generating random samples and mc policy evaluation, in TestMonteCarlo.py.
+   
+   **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
   
  - ## Temporal-Diffrerence Learning | Day 9
    
    TD is another model-free method of RL.
    
-   TD has adventages of dynamic programming and Monte Carlo.
+   TD has adventages of both dynamic programming and Monte Carlo.
      
      - like MC method, TD can learn derictly from raw experience without a model of the environment's dynamics.
      
      - like DP method, TD updates estimates based in part on other learned estimates, without waiting for a final outcome.
+     
+   TD = MC(sampling) + DP(bootstrapping)
+   
+     - sampling : episode
+     
+     - bootstrapping : estimate current value function with value function of next step
      
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/dp.JPG)
      
@@ -142,6 +153,23 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdlearning.JPG)
   
-  
-  
-  
+ - ## The difference among DP, MC and TD | Day 10
+   
+   The updating formuler of value function of TD
+   
+   $$
+   V(S_t) \leftarrow V(S_t) + \alpha (R_{t+1} + \gamma V(S_{t+1}) - V(S_t))
+   $$
+   $$
+   R_{t+1} + \gamma V(S_{t+1})\ is\ TD\ target\
+   $$
+   $$
+   R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\ is\ TD\ bias\ 
+   $$
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/difference_among_three_methods.JPG)
+
+   - Value function of MC is an unbiased estimation, but variance is large.
+   
+   - Value function of TD is an biased estimation, but variance is small.
+   
