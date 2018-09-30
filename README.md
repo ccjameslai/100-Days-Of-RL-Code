@@ -158,13 +158,13 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    The updating formuler of value function of TD
    
    $$
-   V(S_t) \leftarrow V(S_t) + \alpha ({\color{Blue} R_{t+1} + \gamma V(S_{t+1})} - V(S_t))
+   V(S_t) \leftarrow V(S_t) + \alpha (R_{t+1} + \gamma V(S_{t+1}) - V(S_t))
    $$
    
-   $$
-   {\color{Blue} R_{t+1} + \gamma V(S_{t+1})}
-   $$
+   $$$$
+   R_{t+1} + \gamma V(S_{t+1})
+   $$$$
    
-   $$
-   {\color{Red} \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)}
-   $$
+   $$$$
+   \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)
+   $$$$
