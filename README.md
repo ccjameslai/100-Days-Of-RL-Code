@@ -141,12 +141,22 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
      - like DP method, TD updates estimates based in part on other learned estimates, without waiting for a final outcome.
      
+   TD = MC(sampling) + DP(bootstrapping)
+   
+     - sampling : episode
+     
+     - bootstrapping : estimate current value function with value function of next step
+     
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/dp.JPG)
      
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/mcmethod.JPG)
      
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdlearning.JPG)
   
-  
+ - ## The difference among DP, MC and TD | Day 10
+   
+   The updating formuler of value function of TD
+   
+   V(S_t) \leftarrow V(S_t) + \alpha ({\color{Blue} R_{t+1} + \gamma V(S_{t+1})} - V(S_t))
   
   
