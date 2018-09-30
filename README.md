@@ -161,10 +161,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    V(S_t) \leftarrow V(S_t) + \alpha (R_{t+1} + \gamma V(S_{t+1}) - V(S_t))
    $$
    
-   $$$$
+   $$
    R_{t+1} + \gamma V(S_{t+1})
-   $$$$
-   
-   $$$$
+   $$
+   $$
    \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)
-   $$$$
+   $$
