@@ -157,6 +157,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    The updating formuler of value function of TD
    
-   https://latex.codecogs.com/gif.latex?V%28S_t%29%20%5Cleftarrow%20V%28S_t%29%20&plus;%20%5Calpha%20%28%7B%5Ccolor%7BBlue%7D%20R_%7Bt&plus;1%7D%20&plus;%20%5Cgamma%20V%28S_%7Bt&plus;1%7D%29%7D%20-%20V%28S_t%29%29
+   $$
+   V(S_t) \leftarrow V(S_t) + \alpha ({\color{Blue} R_{t+1} + \gamma V(S_{t+1})} - V(S_t))
+   $$
   
   
