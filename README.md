@@ -189,23 +189,24 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
  - ## The forward and backward view of TD(λ) | Day 12
  
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/forwardTD.JPG)
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/forwardTD.JPG)
    
    In forward view, it is more theoretical view. The way to estimating value function is like MC, which begins to calculate the G_t until an episode terminates. 
    
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDgoal.JPG)
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDgoal.JPG)
    
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/backwardTD.JPG)
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/backwardTD.JPG)
    
    In backward view, it is more appropriate for programming. There are three steps to update value function, 
    
       1) calculate TD bias
       
-      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdbias.JPG)
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdbias.JPG)
       
       2) update eligibility trace
       
-      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/updateeligibilitygit .JPG)
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/updateeligibility.JPG)
       
       3) update value function
       $$
