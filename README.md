@@ -193,9 +193,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In forward view, it is more theoretical view. The way to estimating value function is like MC, which begins to calculate the G_t until an episode terminates. 
    
-   $$
-   G^{n}_t = R_{t+1}+\gamma R_{t+2} + \cdot \cdot \cdot + \gamma ^{n-1}R_{t+n} + \gamma ^{n}V(S_{t+n})
-   $$
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDgoal.JPG)
    
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/backwardTD.JPG)
    
@@ -203,15 +201,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
       1) calculate TD bias
       
-      $$ 
-      \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t) 
-      $$
+      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/tdbias.JPG)
       
       2) update eligibility trace
       
-      $$
-      E_t(s) = \left\{\begin{matrix} \gamma \lambda E_{t-1}, & if \ s\neq s_t\\ \gamma \lambda E_{t-1}+1, & if \ s= s_t \d{matrix}\right.
-      $$
+      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/updateeligibilitygit .JPG)
       
       3) update value function
       $$
