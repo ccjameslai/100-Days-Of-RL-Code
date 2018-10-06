@@ -173,6 +173,15 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
      - Value function of TD is an biased estimation, but variance is small.
    
-  - ## Introduction of TD() | Day 11
+  - ## Introduction of TD(λ) | Day 11
+  
+    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDlambda.JPG)
+    
+    As we know G_t is the goal of TD
+    $$
+    G^{(n)}_t = R_{(t+1)} + \gamma R_{(t+2)} + \gamma ^ 2R_{(t+3)} + \cdot \cdot \cdot + \gamma^{n-1} R_{(t+n)} + \gamma ^ nV(S_{t+n})
+    $$
+    
+    
  
  
