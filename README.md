@@ -186,7 +186,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
     TD(λ) means that using G_t-lambda to update the current value function. Hence, we need to fuse G_t of each step and the formula is as follows:
     
     $$
-    G^\lambda _t = (1-\lambda )G^{(1)}_t + \lambda (1-\lambda )G^{(2)}_t + \lambda ^2(1-\lambda )G^{(3)}_t + \cdot \cdot \cdot + \lambda ^{n-1}(1-\lambda )G^{(n)}_t
+    G^\lambda _t = (1-\lambda )G^{(1)}_t + \lambda (1-\lambda )G^{(2)}_t + \lambda ^2(1-\lambda )G^{(3)}_t + \cdot \cdot \cdot + \lambda ^{n-1}(1-\lambda )G^{(n)}_t \approx V(S_t)
     $$
     
     
