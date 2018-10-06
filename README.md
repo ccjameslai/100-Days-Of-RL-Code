@@ -176,10 +176,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  - ## Introduction of TD(λ) | Day 11
   
    As we know, G_t is the goal of TD. We use the next step's value function to update the current value function. Therefore, G_t is used to estimate the current value function. The updating function of n_th step can be represented as follows
-    
-   $$
-   G^{n}_t = R_{t+1}
-   $$
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDgoal.JPG)
    
    TD(λ) means that using G_t-lambda to update the current value function. Hence, we need to fuse G_t of each step and the formula is as follows
     
