@@ -164,7 +164,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    R_{t+1} + \gamma V(S_{t+1})\ is\ called\ as\ TD\ target\
    $$
    $$
-   `R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\ is\ called\ as\ TD\ bias\ `
+   R_{t+1} + \gamma V(S_{t+1}) - V(S_t)\ is\ called\ as\ TD\ bias\ 
    $$
    
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/difference_among_three_methods.JPG)
@@ -177,12 +177,18 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
   
     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/TDlambda.JPG)
     
-    As we know, G_t is the goal of TD. We use the next step's value function to update the current value function. Therefore, G_t is used to estimate the current value function. The updating function of n_th step can be represented as follow:
+    As we know, G_t is the goal of TD. We use the next step's value function to update the current value function. Therefore, G_t is used to estimate the current value function. The updating function of n_th step can be represented as follows:
     
     $$
     G^{(n)}_t = R_{(t+1)} + \gamma R_{(t+2)} + \gamma ^ 2R_{(t+3)} + \cdot \cdot \cdot + \gamma^{n-1} R_{(t+n)} + \gamma ^ nV(S_{t+n})
     $$
     
-    TD(λ) means that using G_t-lambda to update the current value function 
+    TD(λ) means that using G_t-lambda to update the current value function. Hence, we need to fuse G_t of each step and the formula is as follows:
+    
+    $$
+    G^\lambda _t = (1-\lambda )G^{(1)}_t + \lambda (1-\lambda )G^{(2)}_t + \lambda ^2(1-\lambda )G^{(3)}_t + \cdot \cdot \cdot + \lambda ^{n-1}(1-\lambda )G^{(n)}_t
+    $$
+    
+    
  
  
