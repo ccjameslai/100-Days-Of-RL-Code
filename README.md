@@ -173,6 +173,6 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
      - Value function of TD is an biased estimation, but variance is small.
    
-  - ## Introduction of TD($$ \lambda $$) | Day 11
+  - ## Introduction of TD() | Day 11
  
  
