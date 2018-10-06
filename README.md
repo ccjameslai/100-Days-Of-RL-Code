@@ -201,22 +201,19 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In backward view, it is more appropriate for programming. There are three steps to update value function, 
    
-      - 1) calculate TD bias
+      1) calculate TD bias
       
       $$ 
       \delta _t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t) 
       $$
       
-      - 2) update eligibility trace
+      2) update eligibility trace
       
       $$
-      E_t(s) = \left\{\begin{matrix}
-      \gamma \lambda E_{t-1}, & if \ s\neq s_t\\ 
-      \gamma \lambda E_{t-1}+1, & if \ s= s_t
-      \end{matrix}\right.
+      E_t(s) = \left\{\begin{matrix} \gamma \lambda E_{t-1}, & if \ s\neq s_t\\ \gamma \lambda E_{t-1}+1, & if \ s= s_t \d{matrix}\right.
       $$
       
-      - 3) update value function
+      3) update value function
       $$
       V(s) \leftarrow V(s) + \alpha \delta _tE_t(s)
       $$
