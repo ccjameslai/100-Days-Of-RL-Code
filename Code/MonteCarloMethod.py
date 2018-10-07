@@ -21,7 +21,12 @@ def transform(state, action):
     if new_state == 8:
         terminal = True
 
-    return terminal, new_state, -1
+    if new_state == 8:
+        reward = 1
+    else:
+        reward = -1
+
+    return terminal, new_state, reward
 
 def epsilon_greedy(qfunc, s, epsilon):
     action = ['e', 's', 'w', 'n']
