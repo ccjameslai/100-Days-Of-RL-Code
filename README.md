@@ -216,6 +216,18 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
       V(s) \leftarrow V(s) + \alpha \delta _tE_t(s)
       $$
    
+ - ## Sarsa | Day 13
+ 
+   Sarsa is one of TD method, which is on-policy.
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/sarsaalgorithm.JPG)
+   
+   Example of Sarsa:
+   
+     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/exampleofsarsa.JPG)
+     
+     **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestSarsa.py)
+   
    
     
     
