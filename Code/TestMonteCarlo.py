@@ -1,5 +1,6 @@
 import random as rnd
 import MonteCarloMethod
+import copy
 
 def Test_gen_randompi_sample():
     mc = MonteCarloMethod.MonteCarlo()
@@ -42,4 +43,4 @@ def Test_mc():
 
     print(state_flow)
 
-Test_mc()
+#Test_mc()
