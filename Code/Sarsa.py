@@ -1,4 +1,3 @@
-import random as rnd
 
 class sarsa():
     def __init__(self):
@@ -36,50 +35,4 @@ class sarsa():
 
         return terminal, new_state, reward
 
-    def epsilon_greedy(self, qfunc, s, epsilon=0.1):
-        action = ['e', 's', 'w', 'n']
-        pi = 1 - epsilon + float(epsilon / len(action))
-        temp = 0.0
-        max_a = ''
-        for a in action:
-            if temp < qfunc[str(s) + "_" + a]:
-                temp = qfunc[str(s) + "_" + a]
-                max_a = a
-            else:
-                max_a = action[rnd.randint(0, 3)]
 
-        other_action = action[:]
-        other_action.remove(max_a)
-        prob = rnd.random()
-
-        if prob <= pi:
-            return max_a
-        else:
-            idx = rnd.randint(0, 2)
-            return other_action[idx]
-
-    def gen_randompi_sample(self, num):
-        action = ['e', 's', 'w', 'n']
-        state_sample = []
-        action_sample = []
-        reward_sample = []
-
-        for i in range(num):
-            s_tmp = []
-            a_tmp = []
-            r_tmp = []
-            s = self.states[int(rnd.random() * len(self.states))]
-            t = False
-            while t == False:
-                a = action[int(rnd.random() * len(action))]
-                t, new_s, r = self.transform(s, a)
-                s_tmp.append(new_s)
-                a_tmp.append(a)
-                r_tmp.append(r)
-                s = new_s
-
-            state_sample.append(s_tmp)
-            action_sample.append(a_tmp)
-            reward_sample.append(r_tmp)
-
-        return state_sample, action_sample, reward_sample
