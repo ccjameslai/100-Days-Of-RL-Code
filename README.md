@@ -218,7 +218,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
  - ## Sarsa | Day 13
  
-   Sarsa is one of TD method, which is on-policy.
+   Sarsa is one of TD method, which is on-policy. That means the action policy and evaluation policy are the same.
    
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/sarsaalgorithm.JPG)
    
@@ -228,8 +228,15 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestSarsa.py)
    
+ - ## Q learning | Day 14
    
-    
+   Q learnig is another method of TD, which is off-policy. Off-policy means that action policy and evaluation policy are not the same.
+   
+   Example of Q learning:
+   
+     - the maze is the same as Day 13
+      
+     **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearning.py)
     
     
  
