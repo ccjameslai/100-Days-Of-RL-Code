@@ -7,6 +7,8 @@ class Qlearning():
 
         self.actions = {0:'w',1:'e', 2:'s', 3:'n'}
         self.states = [i + 1 for i in range(13)]
+        self.alpha = 0.1
+        self.gamma = 0.5
 
     def initialize_QandE(self):
         Q = {}
@@ -34,5 +36,17 @@ class Qlearning():
 
         return terminal, new_state, reward
 
-    def q_learning(self):
-        return 0
+    def get_Qvalue(self, curr_state, next_state, act, r, qfunc):
+        q_list = []
+        actions = ['w', 'e', 's', 'n']
+        for a in actions:
+            key = str(next_state) + "_" + a
+            q_list.append(qfunc[key])
+
+        action_index = q_list.index(max(q_list))
+        max_key = str(next_state) + "_" + actions[action_index]
+        curr_key = str(curr_state) + "_" + act
+
+        qfunc[curr_key] += self.alpha * (r + self.gamma * qfunc[max_key] - qfunc[curr_key])
+
+        return qfunc

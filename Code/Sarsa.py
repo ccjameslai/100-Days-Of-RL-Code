@@ -1,4 +1,3 @@
-
 class sarsa():
     def __init__(self):
         self.stateaction = [[1,1,2,4,5,5,7,7,9,10,10,12,12],
@@ -8,6 +7,8 @@ class sarsa():
 
         self.actions = {0:'w',1:'e', 2:'s', 3:'n'}
         self.states = [i + 1 for i in range(13)]
+        self.gamma = 0.5
+        self.alpha = 0.1
 
     def initialize_QandE(self):
         Q = {}
@@ -35,4 +36,10 @@ class sarsa():
 
         return terminal, new_state, reward
 
+    def get_Qvalue(self, curr_state, next_state, curr_act, next_act, r, Q):
+        key = str(curr_state) + "_" + str(curr_act)
+        new_key = str(next_state) + "_" + str(next_act)
+        delta = r + self.gamma * Q[new_key] - Q[key]
+        Q[key] += self.alpha * delta
 
+        return Q
