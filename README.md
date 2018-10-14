@@ -240,6 +240,14 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
       
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearning.py)
     
+  - ## Eligibility trace | Day 15
+  
+    In the view of math, eligibility trace is a differential of optimal approximation value function(reference: http://www.cnblogs.com/steven-yang/p/6617134.html). 
+    
+    In the backward view of TD(lambda), it is a memory variable associated with each state.
+    
+    TD method, such as Sarsa or Q-learning, would learn more efficiently with eligibility traces.
+    
     
  
  
