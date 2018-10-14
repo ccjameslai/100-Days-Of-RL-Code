@@ -215,8 +215,22 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
       $$
       V(s) \leftarrow V(s) + \alpha \delta _tE_t(s)
       $$
-   
- - ## Sarsa | Day 13
+ 
+ - ## Eligibility trace | Day 13
+  
+    In the view of math, eligibility trace is a differential of optimal approximation value function(reference: http://www.cnblogs.com/steven-yang/p/6617134.html). 
+    
+    In the backward view of TD(lambda), it is a memory variable associated with each state.
+    
+    TD method, such as Sarsa or Q-learning, would learn more efficiently with eligibility traces.
+    
+    Eligibility traces record which states have been visited recently.
+    
+    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/eligibilitytrace.JPG)
+    
+    **check out the code of TD(lambda)** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestTD_lambda.py)
+ 
+ - ## Sarsa | Day 14
  
    Sarsa is one of TD method, which is on-policy. That means the action policy and evaluation policy are the same.
    
@@ -228,7 +242,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestSarsa.py)
    
- - ## Q learning | Day 14
+ - ## Q learning | Day 15
  
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/qlearning.JPG)
    
@@ -236,17 +250,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    Example of Q learning:
    
-     - the maze is the same as Day 13
+     - the maze is the same as Day 14
       
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearning.py)
     
-  - ## Eligibility trace | Day 15
   
-    In the view of math, eligibility trace is a differential of optimal approximation value function(reference: http://www.cnblogs.com/steven-yang/p/6617134.html). 
-    
-    In the backward view of TD(lambda), it is a memory variable associated with each state.
-    
-    TD method, such as Sarsa or Q-learning, would learn more efficiently with eligibility traces.
     
     
  
