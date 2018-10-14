@@ -2,6 +2,8 @@ import random as rnd
 import ActionPolicy
 
 '''
+The paramater of vfunction_with_TD_lambda is an action policy, which is random or greedy.
+
 Value function would converge as using greedy as action policy.
 
 But it would not converge in stochastic action policy.
@@ -29,7 +31,7 @@ def transform(state, action):
 
     return terminal, new_state, reward
 
-def vfunction_with_TD_lambda():
+def vfunction_with_TD_lambda(p='random'):
     states = [i + 1 for i in range(13)]
     actions = ['w', 'e', 's', 'n']
     gamma = 0.5
@@ -50,8 +52,10 @@ def vfunction_with_TD_lambda():
         s = rnd.randint(1, len(states))
         t = False
         while t == False:
-            #a = actions[rnd.randint(0, 3)]
-            a = ap.greedy(vfunc, s)
+            if p.lower() == 'random':
+                a = actions[rnd.randint(0, 3)]
+            elif p.lower() == 'greedy':
+                a = ap.greedy(vfunc, s)
 
             t, new_s, r = transform(s, a)
             delta = r + gamma * vfunc[new_s] - vfunc[s]
@@ -79,15 +83,14 @@ initial_state = rnd.randint(1, 13)
 print('initial state', initial_state)
 state_flow = []
 action_flow = []
-t = False
-while t == False:
+while True:
     if initial_state == 12:
         break
     action = ap.greedy(vfunc, initial_state)
-    _, new_s, _ = transform(initial_state, action)
-    state_flow.append(new_s)
+    _, next_s, _ = transform(initial_state, action)
+    state_flow.append(next_s)
     action_flow.append(action)
-    initial_state = new_s
+    initial_state = next_s
 
 print('state flow', state_flow)
 print('action flow', action_flow)
