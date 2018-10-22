@@ -259,7 +259,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearning.py)
     
  - ## Sara(lambda) | Day 16
-  
+   
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/sarsalambda.JPG)
+   
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestSarsaLambda.py)
     
     
