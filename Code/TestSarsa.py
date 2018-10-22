@@ -11,6 +11,7 @@ alpha = 0.1
 cnt = 0
 sum_Q = 0
 delta_q = 10000
+
 while delta_q > 1e-7:
     s = rnd.randint(1, 13)
     if s == 12:
