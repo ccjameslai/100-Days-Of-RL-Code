@@ -189,6 +189,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
  - ## The forward and backward view of TD(λ) | Day 12
  
+   The value function of the next state is used to update the value function of the current state. Can it be updated by the next two state's value function ? The answer is positive. It also can be updated by the next n state's value function. Therefore, we have n methods to estimate the current value function. In order to make the approaximate value, weighted sum is the method, that is TD-lambda. 
+ 
      **Forward view**
      
      ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/forwardTD.JPG)
