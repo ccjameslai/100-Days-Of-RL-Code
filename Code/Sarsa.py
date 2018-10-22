@@ -43,3 +43,15 @@ class sarsa():
         Q[key] += self.alpha * delta
 
         return Q
+
+    def update_delta_with_lambda(self, curr_state, next_state, curr_act, next_act, r, Q):
+
+        delta = r + self.gamma * Q[str(next_state) + "_" + next_act] - Q[str(curr_state) + "_" + curr_act]
+
+        return delta
+
+    def get_Qvalue_with_lambda(self, curr_state, curr_act, delta, Q, E):
+
+        Q[str(curr_state) + "_" + curr_act] += self.alpha * delta * E[str(curr_state) + "_" + curr_act]
+
+        return Q
