@@ -33,6 +33,8 @@ while cnt <= 1000 and delta_q > 1e-7:
         s = new_s
         a = new_a
 
+    E = sarsa.initial_eligibility_trace(E)
+
     delta_q = abs(sum(Q.values()) - sum_Q)
     sum_Q = sum(Q.values())
     cnt += 1

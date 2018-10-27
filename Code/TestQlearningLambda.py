@@ -13,10 +13,11 @@ gamma = 0.5
 alpha = 0.1
 lamda = 0.2
 delta = 0
-
+sum_Q = 10000
+delta_q = 100000
 batch = 500
 cnt = 0
-while cnt <= batch:
+while cnt <= batch and delta_q >= 1e-7:
     init_s = rnd.randint(1, 13)
     init_a = policy.epsilon_greedy(Q, init_s)
 
@@ -45,7 +46,12 @@ while cnt <= batch:
         init_s = new_s
         init_a = max_a
 
+    E = q_learning.initial_eligibility_trace(E)
+
+    delta_q = abs(sum(Q.values()) - sum_Q)
+    sum_Q = sum(Q.values())
     cnt += 1
 
+print('epochs : ', cnt)
 best_policy = policy.get_best_policy(Q)
 print(best_policy)
