@@ -67,6 +67,9 @@ def vfunction_with_TD_lambda(p='random'):
 
             s = new_s
 
+        for k, _ in e.items():
+            e[k] = 0
+
         num_of_episode += 1
 
         diff = abs(sum(vfunc.values()) - sum_v)
