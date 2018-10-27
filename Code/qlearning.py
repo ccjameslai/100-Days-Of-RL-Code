@@ -50,3 +50,8 @@ class Qlearning():
         qfunc[curr_key] += self.alpha * (r + self.gamma * qfunc[max_key] - qfunc[curr_key])
 
         return qfunc
+
+    def initial_eligibility_trace(self, e):
+        for k, _ in e.items():
+            e[k] = 0
+        return e

@@ -55,3 +55,8 @@ class sarsa():
         Q[str(curr_state) + "_" + curr_act] += self.alpha * delta * E[str(curr_state) + "_" + curr_act]
 
         return Q
+
+    def initial_eligibility_trace(self, e):
+        for k, _ in e.items():
+            e[k] = 0
+        return e
