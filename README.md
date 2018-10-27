@@ -264,6 +264,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestSarsaLambda.py)
     
-    
+ - ## Qlearning(lambda) | Day 17
  
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/qlearninglambda.JPG) 
  
+     **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearningLambda.py)
