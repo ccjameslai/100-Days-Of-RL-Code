@@ -222,13 +222,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  
  - ## Eligibility trace | Day 13
   
-    In the view of math, eligibility trace is a differential of optimal approximation value function(reference: http://www.cnblogs.com/steven-yang/p/6617134.html). 
+    From the point of view in math, eligibility trace is a differential of optimal approximation value function(reference: http://www.cnblogs.com/steven-yang/p/6617134.html). 
     
-    In the backward view of TD(lambda), it is a memory variable associated with each state.
+    In the backward view of TD(lambda), Eligibility trace is a memory variable associated with each state. In other words, it records which states have been visited recently.
     
     TD method, such as Sarsa or Q-learning, would learn more efficiently with eligibility traces.
-    
-    Eligibility traces record which states have been visited recently.
     
     ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/eligibilitytrace.JPG)
     
