@@ -267,3 +267,21 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/qlearninglambda.JPG) 
  
      **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearningLambda.py)
+     
+ - ## Function approximation | Day 18
+ 
+   There are some pre-conditions in DP, MC and TD, such as
+   
+     - state space and action space are discrete
+     
+     - state space and action space can't be too large
+     
+   The critical point of these methods is the evaluation of value function.
+   
+   In these methods, value function can be seen as a table and state and state-action pair are index. Updating the value function is the same as updating the table. For this table form, it corresponds two things mentioned above, space is discrete and can't be too large.
+   
+   
+   
+   
+   
+   
