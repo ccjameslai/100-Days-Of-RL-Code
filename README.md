@@ -278,7 +278,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
      
    The critical point of these methods is the evaluation of value function.
    
-   In these methods, value function can be seen as a table and state and state-action pair are index. Updating the value function is the same as updating the table. Owing to table form, there are two limitations mentioned above, space is discrete and can't be too large.
+   In these methods, value function can be seen as a table and state and state-action pair are index. Updating the value function is the same as updating the table. Owing to table form, there are two limitations mentioned above, space is discrete and can't be too large. Therefore, fuction approximation could overcome these problems.
    
    There are two methods to update value function in function approximation, growing batch learning and batch learning.
    
