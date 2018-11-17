@@ -324,7 +324,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
    $$
    
+   The following is an example code of function approximation of MC,
    
+   **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestQlearningLambda.py)
    
    
    
