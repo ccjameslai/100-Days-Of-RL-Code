@@ -296,7 +296,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$ 
    \widehat{\upsilon }\left ( s, \theta \right )
    $$
-   .
+   
+   The process of approximating can be seen as supervised learning, 
+   $$
+   \left ( S_{t},U_{t} \right )
+   $$
    
    
    
