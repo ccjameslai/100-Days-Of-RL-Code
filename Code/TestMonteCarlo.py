@@ -1,6 +1,7 @@
 import random as rnd
 import MonteCarloMethod
 import copy
+import numpy as np
 
 def Test_gen_randompi_sample():
     mc = MonteCarloMethod.MonteCarlo()
@@ -44,3 +45,29 @@ def Test_mc():
     print(state_flow)
 
 #Test_mc()
+
+def poly_func(state, theta):
+    #x = [state ** 6, state ** 5, state ** 4, state ** 3, state ** 2, state ** 1, 1]
+    #x = [state ** 4, state ** 3, state ** 2, state ** 1, 1]
+    x = [state ** 3, state ** 2, state ** 1, 1]
+    #x = [state ** 2, state ** 1, 1]
+    return np.array(theta).dot(np.array(x))
+
+def gd_poly_func(state):
+    #x = [state ** 6, state ** 5, state ** 4, state ** 3, state ** 2, state ** 1, 1]
+    #x = [state ** 4, state ** 3, state ** 2, state ** 1, 1]
+    x = [state ** 3, state ** 2, state ** 1, 1]
+    #x = [state ** 2, state ** 1, 1]
+    return x
+
+def rbf(state, theta):
+    
+
+def Testgradiant_based_policy_evaluation():
+    mc = MonteCarloMethod.MonteCarlo()
+
+    v_func = mc.gradiant_based_policy_evaluation(poly_func, gd_poly_func)
+    print(v_func)
+
+Testgradiant_based_policy_evaluation()
+
