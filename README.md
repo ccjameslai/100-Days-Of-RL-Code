@@ -301,6 +301,13 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \phi \left ( s \right ) \ is\ a\ basis\ function\ in\ state\ s.
    $$  
    
+   There are common basis functions as fallows,
+   $$
+   polynaminal\ basis\ function:\ \left ( 1,s_{1},s_{2},s_{1}s_{2},s_{1}^{2},s_{2}^{2},\cdots  \right )
+   $$
+   
+   
+   
    The process of approximating can be seen as a supervised learning, 
    $$
    \left ( S_{t},U_{t} \right )
