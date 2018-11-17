@@ -6,6 +6,7 @@ This is a temporary script file.
 
 import numpy as np
 import random as rnd
+from matplotlib import pyplot as plt
 
 def transform(state, action):
     s_a_table = [[2,3,3,5,5,7,8,8],
@@ -22,7 +23,7 @@ def transform(state, action):
         terminal = True
 
     if new_state == 8:
-        reward = 1
+        reward = 10
     else:
         reward = -1
 
@@ -49,6 +50,11 @@ def epsilon_greedy(qfunc, s, epsilon):
     else:
         idx = rnd.randint(0, 2)
         return other_action[idx]
+
+def encode_state(cur_s, states):
+    den = max(states) - min(states)
+    return (float(cur_s - min(states)) + 0.1) / float(den)
+
 
 class MonteCarlo(object):
     def __init__(self):
@@ -111,6 +117,56 @@ class MonteCarlo(object):
                 vfunc[s] /= nfunc[s]
 
         return vfunc
+
+    def gradiant_based_policy_evaluation(self, func, gd_func, gamma=0.5):
+        sum_theta = 0.0
+        theta = [0] * 4
+        diff = 1000000
+        cnt = 0
+        delta_list = []
+        while diff > 10e-5 and cnt <= 1000:
+            state_sample, action_sample, reward_sample = self.gen_randompi_sample(1)
+            #print('state_sample', state_sample)
+            #print('reward_sample', reward_sample)
+            for iterl in range(len(state_sample)):
+                G = 0.0
+                for step in range(len(state_sample[iterl])-1, -1, -1):
+                    G *= gamma
+                    G += reward_sample[iterl][step]
+                #print('G', G)
+
+                for step in range(len(state_sample[iterl])):
+                    cur_s = state_sample[iterl][step]
+                    if cur_s == 8:
+                        continue
+                    #print('func', func(s, theta))
+                    #print('gd_func', gd_func(s))
+                    en_s = encode_state(cur_s, state_sample[iterl])
+                    #print('encoded s', en_s)
+                    delta_theta = 0.01 * (G - func(en_s, theta)) * np.array(gd_func(en_s))
+
+                    #print('delta_theta', delta_theta)
+                    theta += delta_theta
+
+                    G -= reward_sample[iterl][step]
+                    G /= gamma
+
+            diff = abs(sum(theta) - sum_theta)
+            delta_list.append(diff)
+            #print('theta', theta)
+            cnt+=1
+
+        print('iteration times: ', cnt)
+
+        v_func = []
+        for s in range(1, 9):
+            v = func(s, theta)
+            v_func.append(v)
+
+        plt.plot([d for d in range(len(delta_list))], delta_list, 'g-')
+        plt.show()
+
+        return v_func
 
     def mc_for_Q(self, num_iterl, epsilon):
         n = dict()
