@@ -294,8 +294,12 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    Approximation in parameters is that value function could be approximated with a set of parameters, 
    $$ 
-   \widehat{\upsilon }\left ( s, \theta \right )
+   \widehat{\upsilon }\left ( s, \theta \right ) = \theta ^{T}\phi \left ( s \right )
    $$
+   
+   $$
+   \phi \left ( s \right )
+   $$ is a basis function in state s 
    
    The process of approximating can be seen as a supervised learning, 
    $$
