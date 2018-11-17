@@ -310,7 +310,6 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    Fourier\ basis\ function:\ \phi _{i}\left ( s \right ) = \cos \left ( i\pi s \right ),\ s\in [0,1]
    $$
    
-   aa
    $$
    Radial\ basis\ function:\ \phi _{i}\left ( s \right ) = \exp(-\frac{\left \| s-c_{i} \right \|^{2}}{2\sigma _{i}^{2}})
    $$
