@@ -303,8 +303,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    
    The cost function is,
-   $$
-   arg min_{\theta }\left ( q\left ( s,a \right ) \right - \widehat{q}\left ( s,a,\theta  \right ))^{^{2}}
+   arg$$
+   min_{\theta }\left ( q\left ( s,a \right ) \right - \widehat{q}\left ( s,a,\theta  \right ))^{^{2}}
    $$
    
    
