@@ -324,6 +324,13 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
    $$
    
+   Gradient descent is used to update parameters, and the updating equation is
+   
+   $$
+   \theta_{t+1}=\theta_{t}+\alpha[U_{t}-\widehat{\upsilon}(S_{t},\theta_{t})]\bigtriangledown_{\theta}\widehat{\upsilon}
+   (S_{t},\theta_{t})
+   $$
+   
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
    
