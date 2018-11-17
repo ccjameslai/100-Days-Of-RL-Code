@@ -298,7 +298,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    
    $$
-   \phi \left ( s \right ) \_ is a basis function in state s
+   \phi \left ( s \right ) \ is\ a\ basis\ function\ in\ state\ s.
    $$  
    
    The process of approximating can be seen as a supervised learning, 
