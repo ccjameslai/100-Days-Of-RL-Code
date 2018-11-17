@@ -311,7 +311,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    
    $$
-   Fourier\ basis\ function:\ \phi _{i}\left ( s \right ) = \cos \left ( i\pi s \right ),\ s\in [0,1]
+   Radial\ basis\ function:\ \phi _{i}\left ( s \right ) = \exp(-\frac{\left \| s-c_{i} \right \|^{2}}{2\sigma _{i}^{2}})
    $$
    
    The process of approximating can be seen as a supervised learning, 
@@ -324,7 +324,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
    $$
    
-   The following is an example code of function approximation of MC(Testgradiant_based_policy_evaluation), 
+   The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
    
    
