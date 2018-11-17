@@ -297,10 +297,16 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \widehat{\upsilon }\left ( s, \theta \right )
    $$
    
-   The process of approximating can be seen as supervised learning, 
+   The process of approximating can be seen as a supervised learning, 
    $$
    \left ( S_{t},U_{t} \right )
    $$
+   
+   The cost function is,
+   $$
+   arg min_{\theta }\left ( q\left ( s,a \right ) \right - \widehat{q}\left ( s,a,\theta  \right ))^{^{2}}
+   $$
+   
    
    
    
