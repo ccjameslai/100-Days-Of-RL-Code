@@ -301,22 +301,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \phi \left ( s \right ) \ is\ a\ basis\ function\ in\ state\ s.
    $$  
    
-   There are common basis functions as fallows,
-   $$
-   Polynaminal\ basis\ function:\ \left ( 1,s_{1},s_{2},s_{1}s_{2},s_{1}^{2},s_{2}^{2},\cdots  \right )
-   $$
-   
-   $$
-   Fourier\ basis\ function:\ \phi _{i}\left ( s \right ) = \cos \left ( i\pi s \right ),\ s\in [0,1]
-   $$
-   
-   $$
-   Radial\ basis\ function:\ \phi_{i}\left(s\right) = \exp(-\frac{\left \|s-c_{i}\right\|^{2}}{2\sigma_{i}^{2}})
-   $$
-   
    The process of approximating can be seen as a supervised learning, 
    $$
-   \left ( S_{t},U_{t} \right )
+   \left\langle s_{1},G_{1}\right\rangle,\left\langle s_{2},G_{2}\right\rangle,\cdots \left\langle s_{T},G_{T}\right\rangle
    $$
    
    The cost function is,
@@ -330,6 +317,22 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \theta_{t+1}=\theta_{t}+\alpha[U_{t}-\widehat{\upsilon}(S_{t},\theta_{t})]\bigtriangledown_{\theta}\widehat{\upsilon}
    (S_{t},\theta_{t})
    $$
+   
+   
+   There are common basis functions as fallows,
+   $$
+   Polynaminal\ basis\ function:\ \left ( 1,s_{1},s_{2},s_{1}s_{2},s_{1}^{2},s_{2}^{2},\cdots  \right )
+   $$
+   
+   $$
+   Fourier\ basis\ function:\ \phi _{i}\left ( s \right ) = \cos \left ( i\pi s \right ),\ s\in [0,1]
+   $$
+   
+   $$
+   Radial\ basis\ function:\ \phi_{i}\left(s\right) = \exp(-\frac{\left \|s-c_{i}\right\|^{2}}{2\sigma_{i}^{2}})
+   $$
+   
+   
    
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
