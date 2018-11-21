@@ -313,12 +313,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    (S_{t},\theta_{t})
    $$
    
-   The cost function is,
-   $$
-   argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
-   $$
+   There are two ways to update parametors, 1)incremental, 2)batch.
    
-   There are common basis functions as fallows,
+   In incremental way, there are common basis functions as fallows,
    $$
    Polynaminal\ basis\ function:\ \left ( 1,s_{1},s_{2},s_{1}s_{2},s_{1}^{2},s_{2}^{2},\cdots  \right )
    $$
@@ -331,7 +328,16 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    Radial\ basis\ function:\ \phi_{i}\left(s\right) = \exp(-\frac{\left \|s-c_{i}\right\|^{2}}{2\sigma_{i}^{2}})
    $$
    
+   In batch way, th input data set is
+   $
+   D = \left\{\left\langle s_{1},\upsilon_{1}^{\pi}\right\rangle,\left\langle s_{2},\upsilon_{2}^{\pi}\right \rangle,\cdots,\left\langle 
+   s_{T},\upsilon_{T}^{\pi}\right\rangle\right\}
+   $
    
+   The cost function is,
+   $$
+   argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
+   $$
    
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
