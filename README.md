@@ -330,8 +330,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In batch way, th input data set is
    $$
-   D=\left \{ \left \langle s_{1},\upsilon _{1}^{\pi } \right \rangle,\left \langle s_{2},\upsilon _{2}^{\pi } \right
-   \rangle,\cdots,\left \langle s_{T},\upsilon _{T}^{\pi } \right \rangle \right \}
+   D=\left\{\left \langle s_{1},\upsilon _{1}^{\pi } \right \rangle,\left \langle s_{2},\upsilon _{2}^{\pi }
+   \right \rangle,\cdots,\left \langle s_{T},\upsilon _{T}^{\pi } \right \rangle \right \}
    $$
    
    The cost function is,
