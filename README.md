@@ -334,7 +334,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    
    $$
-   Such\ that\ LS(\theta)=\sum_{t=1}^{T}(\upsilon _{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
+   Such\ that\ LS(\theta)=\sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
+   $$
+   $$
    argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
    $$
    
