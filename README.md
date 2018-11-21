@@ -306,18 +306,17 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \left\langle s_{1},G_{1}\right\rangle,\left\langle s_{2},G_{2}\right\rangle,\cdots \left\langle s_{T},G_{T}\right\rangle
    $$
    
+   Gradient descent is used to update parameters, and the updating equation is
+   
+   $$
+   \Delta \theta =\alpha[G_{t}-\widehat{\upsilon}(S_{t},\theta_{t})]\bigtriangledown_{\theta}\widehat{\upsilon}
+   (S_{t},\theta_{t})
+   $$
+   
    The cost function is,
    $$
    argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
    $$
-   
-   Gradient descent is used to update parameters, and the updating equation is
-   
-   $$
-   \theta_{t+1}=\theta_{t}+\alpha[U_{t}-\widehat{\upsilon}(S_{t},\theta_{t})]\bigtriangledown_{\theta}\widehat{\upsilon}
-   (S_{t},\theta_{t})
-   $$
-   
    
    There are common basis functions as fallows,
    $$
