@@ -340,7 +340,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    Such that,
    $$
-   min\ LS(\theta)\equiv min\ \sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon} _{t}^{\pi}(s_{t},\theta))^{2}
+   min\ LS(\theta)\equiv min\ \sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon}_{t}^{\pi}(s_{t},\theta))^{2}
    $$
    
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
