@@ -313,7 +313,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    (S_{t},\theta_{t})
    $$
    
-   There are two ways to update parametors, 1)incremental, 2)batch.
+   There are two ways to update parameters, 1) incremental, 2) batch.
    
    In incremental way, there are common basis functions as fallows,
    $$
@@ -330,8 +330,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In batch way, th input data set is
    $
-   D = \left\{\left\langle s_{1},\upsilon_{1}^{\pi}\right\rangle,\left\langle s_{2},\upsilon_{2}^{\pi}\right \rangle,\cdots,\left\langle 
-   s_{T},\upsilon_{T}^{\pi}\right\rangle\right\}
+   D=\left\{\left\langle s_{1},\upsilon_{1}^{\pi}\right\rangle,\left\langle s_{2},\upsilon_{2}^{\pi}\right\rangle,\cdots,\left\langle s_{T},\upsilon_{T}^{\pi}\right\rangle\right\}
    $
    
    The cost function is,
