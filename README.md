@@ -333,11 +333,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    \widehat{\upsilon}(s_{t},\theta)
    $$
    
+   Such that,
    $$
-   Such\ that\ LS(\theta)=\sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
-   $$
-   $$
-   argmin_{\theta }\left ( q\left ( s,a \right ) - \widehat{q}\left ( s,a,\theta  \right )\right )^{2}
+   min\ LS(\theta)\equiv min\ \sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
    $$
    
    The cost function is,
