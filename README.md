@@ -330,9 +330,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In batch way, data set D is given, and the goal is to find the best fitting function,
    $$
-   \widehat{\upsilon }\left ( s,\theta  \right ),\ such\ that,\ 
-   LS\left ( \theta  \right )=\sum_{t=1}^{T}\left ( \upsilon _{t}^{\pi } -\widehat{\upsilon }_{t}^{\pi }
-   \left ( s_{t},\theta  \right )\right )^{2}
+   LS(\theta)=\sum_{t=1}^{T}(\upsilon _{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
    $$
    
    The cost function is,
