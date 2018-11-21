@@ -330,6 +330,10 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    In batch way, data set D is given, and the goal is to find the best fitting function,
    $$
+   {\upsilon}(s_{t},\theta)
+   $$
+   
+   $$
    LS(\theta)=\sum_{t=1}^{T}(\upsilon _{t}^{\pi}-\widehat{\upsilon}(s_{t},\theta))^{2}
    $$
    
