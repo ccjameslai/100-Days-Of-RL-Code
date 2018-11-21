@@ -328,12 +328,11 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    Radial\ basis\ function:\ \phi_{i}\left(s\right) = \exp(-\frac{\left \|s-c_{i}\right\|^{2}}{2\sigma_{i}^{2}})
    $$
    
-   In batch way, the input data set is
+   In batch way, data set D is given, and the goal is to find the best 
+   $$
+   \widehat{\upsilon }\left ( s,\theta  \right ),\ such\ that,\ LS\left ( \theta  \right )=\sum_{t=1}^{T}\left ( \upsilon _{t}^{\pi } -\widehat{\upsilon }_{t}^{\pi }\left ( s_{t},\theta  \right )\right )^{2}
+   $$
    
-   $$
-   D=\left\{\left \langle s_{1},\upsilon _{1}^{\pi } \right \rangle,\left \langle s_{2},\upsilon _{2}^{\pi } 
-   \right \rangle,\cdots,\left \langle s_{T},\upsilon _{T}^{\pi } \right \rangle \right \}
-   $$
    
    The cost function is,
    $$
