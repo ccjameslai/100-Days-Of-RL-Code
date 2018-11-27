@@ -346,7 +346,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
    
-   
+ - ## Introduction of DQN(Deep Q learning Network) | Day 19
+ 
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/DQN.JPG)
    
    
    
