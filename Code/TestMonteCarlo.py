@@ -61,7 +61,7 @@ def gd_poly_func(state):
     return x
 
 def rbf(state, theta):
-    
+
 
 def Testgradiant_based_policy_evaluation():
     mc = MonteCarloMethod.MonteCarlo()
