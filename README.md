@@ -350,7 +350,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    The meaning of non-parameters is that the number of parameters and form of basis are not fixed but formed by samples.
    
-   For example, given traning samples, $$ T=\left \{ (x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{N},y_{N}) \right \} &&
+   For example, given traning samples, $$ T=\left \{ (x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{N},y_{N}) \right \} $$
  
  - ## Introduction of DQN(Deep Q learning Network) | Day 21
  
