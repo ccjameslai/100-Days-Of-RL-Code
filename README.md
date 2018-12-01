@@ -345,8 +345,14 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    The following is an example code of function approximation of MC (Testgradiant_based_policy_evaluation), 
    **check out the code** [here](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Code/TestMonteCarlo.py)
+ 
+ - ## Non-parameters' function approximation | Day 20
    
- - ## Introduction of DQN(Deep Q learning Network) | Day 20
+   The meaning of non-parameters is that the number of parameters and form of basis are not fixed but formed by samples.
+   
+   For example, given traning samples, $$ T=\left \{ (x_{1},y_{1}),(x_{2},y_{2}),\cdots ,(x_{N},y_{N}) \right \} &&
+ 
+ - ## Introduction of DQN(Deep Q learning Network) | Day 21
  
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/DQN.JPG)
    
