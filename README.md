@@ -352,7 +352,8 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    For example, given training samples to generate an approximated function fitting these data.
    $$
-   T = {\left ( x_{1},y_{1} \right ),\left ( x_{2},y_{2} \right ),\cdots ,\left ( x_{N},y_{N} \right )}
+   T = \left ( x_{1},y_{1} \right ),\left ( x_{2},y_{2} \right ),\cdots ,\left ( x_{N},y_{N} \right )
+   f(x)=\sum_{i=1}^{N}\alpha _{i}y_{i}K(x,x_{i})+b
    $$
    
    There are two common methods for approximation, one is kernel based and the other is Gaussian process based.
