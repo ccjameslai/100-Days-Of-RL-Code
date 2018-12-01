@@ -352,7 +352,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    For example, given training samples to generate an approximated function fitting these data.
    $$
-   min\ LS(\theta)\equiv min\ \sum_{t=1}^{T}(\upsilon_{t}^{\pi}-\widehat{\upsilon_{t}^{\pi}}(s_{t},\theta))^{2}
+   T=\left \{ \left ( x_{1},y_{1} \right ),\left ( x_{2},y_{2} \right ),\cdots ,\left ( x_{N},y_{N} \right )\right\}
    $$
    $$
    T=\left \{ \left ( x_{1},y_{1} \right ),\left ( x_{2},y_{2} \right ),\cdots ,\left ( x_{N},y_{N} \right )\right \}
