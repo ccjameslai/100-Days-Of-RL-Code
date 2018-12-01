@@ -356,7 +356,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    $$
    
    $$
-   f(x)=\sum_{i=1}^{N}\alpha _{i}y_{i}K(x,x_{i})+b
+   f(x)=\sum_{i=1}^{N}\alpha _{i}y_{i}K\left ( x,x_{i} \right )+b
    $$
    
    There are two common methods for approximation, one is kernel based and the other is Gaussian process based.
