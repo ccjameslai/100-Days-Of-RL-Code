@@ -354,6 +354,9 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
    $$
    T=\left \{ \left ( x_{1},y_{1} \right ),\left ( x_{2},y_{2} \right ),\cdots ,\left ( x_{N},y_{N} \right )\right \}
+   $$
+   
+   $$
    f(x)=\sum_{i=1}^{N}\alpha _{i}y_{i}K\left ( x,x_{i} \right )+b
    $$
    
