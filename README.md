@@ -348,7 +348,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  
  - ## Non-parameters' function approximation | Day 20
    
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/20.JPG)
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/day20.JPG)
    
  - ## Introduction of DQN(Deep Q learning Network) | Day 21
  
