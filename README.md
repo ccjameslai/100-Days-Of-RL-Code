@@ -348,11 +348,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  
  - ## Non-parameters' function approximation | Day 20
    
-   The meaning of non-parameters is that the number of parameters and form of basis are not fixed but formed by samples.
-   
-   For example, given training samples to generate an approximated function fitting these data.
-   
-   There are two common methods for approximation, one is kernel based and the other is Gaussian process based.
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/20.JPG)
    
  - ## Introduction of DQN(Deep Q learning Network) | Day 21
  
