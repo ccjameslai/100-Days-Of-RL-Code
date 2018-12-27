@@ -356,7 +356,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
  - ## Sample code for DQN | Day 22
    
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_DQN.PNG)
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_DQN.png)
    
    **check out the code** to be continuous ...
   
@@ -366,7 +366,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
  - ## Sample code for Double DQN with proportional prioritization | Day 24
  
-   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/double_DQN_with_prioritized.PNG)
+   ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/pesudo_code_of_double_DQN_with_prioritized.png)
  
    **check out the code** to be continuous ...
    
