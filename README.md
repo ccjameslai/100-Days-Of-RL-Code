@@ -353,10 +353,18 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
  - ## Introduction of DQN(Deep Q learning Network) | Day 21
  
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/DQN.JPG)
+   
+ - ## Sample code for DQN | Day 22
   
- - ## updates of DQN | Day 22
+   To be continuou ...
+  
+ - ## updates of DQN | Day 23
  
    ![image](https://github.com/ccjameslai/100-Days-Of-RL-Code/blob/master/Info_graph/day22.JPG)
+   
+ - ## Sample code for Double DQN with proportional prioritization | Day 24
+ 
+   To be continuou ...
    
    
    
