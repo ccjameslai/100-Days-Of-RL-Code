@@ -356,7 +356,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
  - ## Sample code for DQN | Day 22
   
-   To be continuou ...
+   To be continuous ...
   
  - ## updates of DQN | Day 23
  
@@ -364,7 +364,7 @@ It has three parts, 1) fundation of RL, 2) RL based on value function, 3) RL bas
    
  - ## Sample code for Double DQN with proportional prioritization | Day 24
  
-   To be continuou ...
+   To be continuous ...
    
    
    
